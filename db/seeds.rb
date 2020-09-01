@@ -1,7 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+product = Product.new(name: "Martin D-28", price: 2899, image_url: "https://images-na.ssl-images-amazon.com/images/I/6144VPBpyyL._AC_SL1200_.jpg", description: "2017 D-28 Dreadnought Acoustic Guitar Natural. Sometimes innovation is in the details and this is certainly true with Martin’s re-imagined 2017 D-28. After nearly a century at the helm, and as the quintessential workhorse of music legends like Hank Williams, The Beatles, Johnny Cash, Neil Young, Bob Dylan, and so many more, Martin's legendary D-28 has been lovingly and artfully enhanced.", available: "yes")
+product.save
+product = Product.new(name: "Taylor K14ce", price: 4999, image_url: "https://images-na.ssl-images-amazon.com/images/I/81ZkYrK03NL._AC_SL1500_.jpg", description: "This gorgeous Grand Auditorium features Hawaiian koa back and sides paired with a torrefied Sitka spruce top. The guitar was inspired by Taylor's revolutionary V-Class bracing, which boosts volume evenly across the tonal spectrum, increases sustain, and improves the natural intonation of the instrument by creating a more synergistic response from the soundboard. This fosters a more harmonious relationship between the notes you play, helping chords to ring out in cohesive splendor.", available: "yes")
+product.save
