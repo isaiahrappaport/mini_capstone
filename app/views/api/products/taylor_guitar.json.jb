@@ -1,0 +1,6 @@
+{
+  name: @taylor.name,
+  price: @taylor.price,
+  image: @taylor.image_url,
+  description: @taylor.description,
+}
