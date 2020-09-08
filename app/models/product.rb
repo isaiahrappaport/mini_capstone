@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   end
 
   def is_discounted?
-    if price <= 1000
+    if price.to_i <= 1000
     end
   end
 end
