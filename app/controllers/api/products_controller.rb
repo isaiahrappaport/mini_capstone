@@ -16,8 +16,11 @@ class Api::ProductsController < ApplicationController
       image_url: params["image_url"],
       description: params["description"],
     )
-    @product.save
-    render "create.json.jb"
+    if @product.save
+      render "create.json.jb"
+    else
+      render json: { errors: @product.errors.full_messages }, status: 422 #:unprocessable_entity
+    end
   end
 
   def update
