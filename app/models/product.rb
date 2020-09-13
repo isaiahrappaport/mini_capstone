@@ -3,6 +3,9 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :description, length: { in: 2..500 }
 
+  belongs_to :supplier
+  has_many :images
+
   def friendly_updated_at
     updated_at.strftime("%D")
   end

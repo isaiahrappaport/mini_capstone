@@ -1,0 +1,7 @@
+@suppliers.map do |supplier|
+  {
+    name: supplier.name,
+    email: supplier.email,
+    phone_number: supplier.phone_number,
+  }
+end
