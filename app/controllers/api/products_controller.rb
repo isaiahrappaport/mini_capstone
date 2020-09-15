@@ -17,7 +17,6 @@ class Api::ProductsController < ApplicationController
     else
       @products = @products.order(:id => :asc)
     end
-
     render "index.json.jb"
   end
 
@@ -27,17 +26,22 @@ class Api::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(
-      name: params["name"],
-      price: params["price"],
-      # image: params["image"],
-      description: params["description"],
-      supplier_id: params["supplier_id"],
-    )
-    if @product.save
-      render "create.json.jb"
+    if current_user
+      p current_user
+      @product = Product.new(
+        name: params["name"],
+        price: params["price"],
+        # image: params["image"],
+        description: params["description"],
+        supplier_id: params["supplier_id"],
+      )
+      if @product.save
+        render "create.json.jb"
+      else
+        render json: { errors: @product.errors.full_messages }, status: 422 #:unprocessable_entity
+      end
     else
-      render json: { errors: @product.errors.full_messages }, status: 422 #:unprocessable_entity
+      render json: []
     end
   end
 
