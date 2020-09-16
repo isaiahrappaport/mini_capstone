@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     delete "/products/:id" => "products#delete"
 
     post "/orders" => "orders#create"
+    get "/orders" => "orders#index"
   end
 end
