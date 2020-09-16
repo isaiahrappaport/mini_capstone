@@ -1,7 +1,7 @@
 class Api::OrdersController < ApplicationController
   def index
     if current_user
-      @orders = Order.all
+      @orders = current_user.orders
       render "index.json.jb"
     else
       render json: { error: "must login to view orders" }
