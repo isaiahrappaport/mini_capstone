@@ -1,10 +1,10 @@
 {
   id: product.id,
   name: product.name,
-  image: product.images,
+  images: product.images,
   description: product.description,
-  price: number_to_currency(product.price),
-  tax: number_to_currency(product.tax),
-  total: number_to_currency(product.total),
+  price: (product.price),
+  tax: (product.tax),
+  total: (product.total),
   supplier: product.supplier,
 }

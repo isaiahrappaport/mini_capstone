@@ -8,6 +8,10 @@ class Api::OrdersController < ApplicationController
     end
   end
 
+  def show
+    @order = current_user.orders.find_by(id: params[:id])
+  end
+
   def create
     if current_user
       product = Product.find_by(id: params[:product_id])
