@@ -5,4 +5,6 @@
   subtotal: @order.subtotal,
   tax: @order.tax,
   total: @order.total,
+  id: @order.id,
+  product: @order.product,
 }
