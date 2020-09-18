@@ -8,6 +8,10 @@ class Api::ProductsController < ApplicationController
       @products = @products.where("name ILIKE ?", "%#{params[:search]}%")
     end
 
+    if params[:category]
+      @products = product.categories
+    end
+
     if params[:discount] == "true"
       @products = @products.where("price < 3000")
     end

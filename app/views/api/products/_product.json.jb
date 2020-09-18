@@ -1,6 +1,7 @@
 {
   id: product.id,
   name: product.name,
+  categories: product.categories,
   images: product.images,
   description: product.description,
   price: (product.price),
