@@ -1,0 +1,5 @@
+@carted_products.map do |product|
+  {
+    product: product.product,
+  }
+end

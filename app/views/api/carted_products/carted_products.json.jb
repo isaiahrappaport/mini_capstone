@@ -1,0 +1,6 @@
+{
+  product: @carted_product.product,
+  quantity: @carted_product.quantity,
+  user: @carted_product.user,
+  status: @carted_product.status,
+}
