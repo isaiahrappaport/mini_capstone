@@ -1,5 +1,11 @@
 @carted_products.map do |product|
   {
+
+    user_id: product.user_id,
     product: product.product,
+    quantity: product.quantity,
+    user: product.user,
+    status: product.status,
+
   }
 end
